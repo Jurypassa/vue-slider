@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    position: relative;
+}
+
+.container{
+    width: 50%;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+/* inizio jumbo */
+
+.jumbo{
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+
+.jumbo .descrizione{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.descrizione h3{
+    color: white;
+}
+
+.descrizione .testo{
+    color: lightgray;
+}
+
+
+/* / jumbo */
+
+/* inizio anteprime */
+
+.anteprime{
+    background-color: black;
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+
+.box{
+    height: 10vh;
+}
+
+.container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.opacity{
+    opacity: 0.5;
+}
+
+.selected{
+    border: 2px solid lightgray;
+    opacity: initial;
+}
+
+.box-jumbo{
+    height: 50vh;
+}
+
+.active{
+    display: block;
+}
+
+
+
+.top,
+.bottom{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 50%;
+    border: none;
+    z-index: 2;
+}
+
+.top{
+    top: 3px;
+}
+
+.bottom{
+    bottom: 3px;
+}
+
+/* / anteprime */
+
+/* debug */
+
+/* .debug .container{
+    background-color: lightblue;
+} */

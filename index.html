@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carosello Multi Array</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div id="root">
+
+        <!-- inizio main -->
+        <main class="debug">
+
+            <!-- inizio container -->
+            <div class="container">
+
+                <div class="jumbo">
+
+                    <div class="container-jumbo">
+                        <div class="box-jumbo" >
+                            <img :src="array[immagineAttuale].immagine" alt="array[immagineAttuale].titolo">
+                        </div>
+                    </div>
+
+                    <div class="descrizione">
+
+                        <div class="titolo">
+                            <h3 class="box-titolo">
+                                {{array[immagineAttuale].titolo}}
+                            </h3>
+                        </div>
+
+                        <div class="testo">
+                            <p class="box-testo">
+                                {{array[immagineAttuale].testo}}
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="anteprime">
+
+                    <button class="top" @click="prevImage()">&uarr;</button>
+
+                    <div class="box opacity" v-for="(elm, i) in array" :class='i == immagineAttuale ? "selected" : ""' @click="immagineSelezionata(i)">
+                        <img :src="elm.immagine" alt="elm.titolo">
+                    </div>
+
+                    <button class="bottom" @click="nextImage()">&darr;</button>
+
+                </div>
+            </div>
+        </main>
+        <!-- / main -->
+
+    </div>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
